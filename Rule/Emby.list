@@ -1,0 +1,11 @@
+# > 流媒体 Dolphin 服务器
+DOMAIN,public.emby.ws
+
+# > 流媒体 nyamedia 体验服
+DOMAIN,emby.bangumi.ca
+
+# > 流媒体 MisakaF 体验服
+DOMAIN,emby.misakaf.org 
+DOMAIN,cdn.misakaf.org
+
+
