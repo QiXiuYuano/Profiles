@@ -9,3 +9,5 @@ DOMAIN,emby.misakaf.org
 DOMAIN,cdn.misakaf.org
 DOMAIN-SUFFIX,misakaf.org
 
+# > 流媒体 TreeDiagram 体验服
+DOMAIN,789.123456.al
