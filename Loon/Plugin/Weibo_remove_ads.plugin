@@ -1,10 +1,10 @@
 #!name = 微博去广告
-#!desc = 过滤微博广告及去除各部分推广模块
+#!desc = 过滤微博广告及去除各部分推广模块，解锁会员图标
 #!openUrl = 
 #!author = RuCu6 zmqcherish Cuttlefish
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Weibo.png
-#!date = 2023-09-06 18:55:33
+#!date = 2023-09-09 22:11:10
 
 [Rule]
 # 请求放行
@@ -71,7 +71,7 @@ http-response ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php scr
 http-response ^https:\/\/wbapp\.uve\.weibo\.com\/(preload\/get_ad|wbapplua\/wbpullad\.lua)\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除开屏广告
 
 # 解锁会员图标
-http-response ^https:\/\/new\.vip\.weibo\.cn\/aj\/appicon\/list\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+http-response ^https:\/\/new\.vip\.weibo\.cn\/aj\/appicon\/list\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js, requires-body = true, tag = 解锁会员图标
 
 # 跳过重定向页面以直接访问 //weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn
 http-request ^https:\/\/weibo\.cn\/sinaurl\?(.*&)?(u|toasturl|goto)=url script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/Weibo/Weibo_remove_redirect.js, tag = 跳过重定向
