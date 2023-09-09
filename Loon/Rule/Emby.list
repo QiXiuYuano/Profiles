@@ -5,8 +5,6 @@ DOMAIN,public.emby.ws
 DOMAIN,emby.bangumi.ca
 
 # > 流媒体 MisakaF 体验服
-DOMAIN,emby.misakaf.org 
-DOMAIN,cdn.misakaf.org
 DOMAIN-SUFFIX,misakaf.org
 
 # > 流媒体 TreeDiagram 体验服
