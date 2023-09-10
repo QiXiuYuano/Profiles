@@ -4,6 +4,8 @@
 
 ### 特别感谢：
 
+* [@RuCu6](https://github.com/RuCu6/)
+
 * [@Yi Ke](https://gitlab.com/lodepuly/vpn_tool/)
 
 * [@Repcz](https://github.com/Repcz)
