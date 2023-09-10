@@ -1,6 +1,7 @@
 #!name = 腾讯视频去广告
 #!desc = 过滤腾讯视频广告（由@RuCu6的cnftp转写为Loon版自用).
 #!author = RuCu6
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Tencent_Video.png
 #!update = 2023-09-10 10:35:32
 
 [Rule]
