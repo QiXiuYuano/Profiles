@@ -1,0 +1,32 @@
+#!name = 腾讯视频去广告
+#!desc = 过滤腾讯视频广告（由@RuCu6的cnftp转写为Loon版自用).
+#!author = RuCu6
+#!update = 2023-09-10 10:35:32
+
+[Rule]
+# 请求拦截
+# 腾讯 无法使用的推送服务
+DOMAIN, tpns.qq.com, REJECT
+# 腾讯视频
+DOMAIN, adsmind.gdtimg.com, REJECT
+DOMAIN, btrace.qq.com, REJECT
+DOMAIN, info4.video.qq.com, REJECT
+DOMAIN, info6.video.qq.com, REJECT
+DOMAIN, ios.video.mpush.qq.com, REJECT
+DOMAIN, mtrace.qq.com, REJECT
+DOMAIN, pgdt.gtimg.cn, REJECT
+DOMAIN, vv.video.qq.com, REJECT
+
+
+[Rewrite]
+# 腾讯视频
+^http:\/\/[0-9\.:]*\/?(defaultts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ reject
+^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ reject
+^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|varietyts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ reject
+
+[Script]
+
+
+[Mitm]
+
+

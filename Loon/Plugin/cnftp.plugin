@@ -1,7 +1,7 @@
 #!name = cnftp
 #!desc = China Film and Television Platform（转写为Loon版自用).
 #!author = RuCu6
-#!update = 2023-09-010 10:35:32
+#!update = 2023-09-10 10:35:32
 
 [Rule]
 # 请求拦截
