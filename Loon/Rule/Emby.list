@@ -9,3 +9,6 @@ DOMAIN-SUFFIX,misakaf.org
 
 # > 流媒体 TreeDiagram 体验服
 DOMAIN,789.123456.al
+
+# > 流媒体 卡戎 体验服
+DOMAIN-SUFFIX,charontv.com
