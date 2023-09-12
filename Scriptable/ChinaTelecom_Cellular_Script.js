@@ -162,7 +162,7 @@ async function AsyncJs(){
   if (fm.isFileStoredIniCloud(module.filename)) {
     fm = FileManager.iCloud();
   }
-  const url = '';
+  const url = 'https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/Scriptable/ChinaTelecom_Cellular_Script.js';
   const request = new Request(url);
   try {
     const code = await request.loadString();
