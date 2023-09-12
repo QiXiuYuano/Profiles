@@ -1,3 +1,7 @@
+// 本脚本来源互联网大佬编写，仅作微调以供自用。将默认显示已用流量调整为剩余流量
+// 原文链接：https://github.com/ChinaTelecomOperators/ChinaTelecom
+// 原文频道：https://t.me/CatStudyCase
+
 const w = new ListWidget()
 const DynamicText = Color.dynamic(new Color('#111111'), new Color('#ffffff'))
 w.backgroundColor = Color.dynamic(new Color('#ffffff'), new Color('#1c1c1e'))
