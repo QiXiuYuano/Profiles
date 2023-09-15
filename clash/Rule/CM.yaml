@@ -121,7 +121,7 @@ dns:
 # ###结束
 
 proxy-providers:
-  Subscribe: {<<: *p, path: ./all.yaml, url: 机场订阅}
+  Subscribe: {type: http, interval: 86400, path: ./all.yaml, url: 机场订阅}
     # Meta支持机场通用订阅
           
 proxies: 
