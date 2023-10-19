@@ -1,3 +1,6 @@
+# > TMDB 网址
+DOMAIN-SUFFIX,themoviedb.org
+
 # > 流媒体 Dolphin 服务器
 DOMAIN,public.emby.ws
 
@@ -12,3 +15,6 @@ DOMAIN,789.123456.al
 
 # > 流媒体 卡戎 体验服
 DOMAIN-SUFFIX,charontv.com
+
+
+
