@@ -1,3 +1,7 @@
+# > TMDB
+DOMAIN-SUFFIX,themoviedb.org
+
+
 # > 流媒体 Dolphin 服务器
 DOMAIN,public.emby.ws
 
