@@ -139,7 +139,7 @@ async function Run(){
 
     const rowSpacing = 10; // 设置行间距
     const leftPadding = Number(getdata('Left_Padding'))|| 5; // 设置左边距
-    const LimtUnlimitPadding=  Number(getdata('Space'))|| 50; //设置第一行通用与定向间距
+    const LimtUnlimitPadding=  Number(getdata('Space'))|| 20; //设置第一行通用与定向间距
 
     generateMediumWidget(Query ,str ,str1 ,w ,rowSpacing ,leftPadding ,LimtUnlimitPadding)
     if (Wsize == 1) { w.presentMedium() }
