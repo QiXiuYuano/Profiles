@@ -78,7 +78,7 @@ async function Run(){
 	    let a2=new Alert() 
 	    a2.title='组件间距设置'
 	    a2.message=`柱状图单次减少量为0.1`
-	    a2.addTextField('组件间隔 默认值50' , getdata('Space')||'')
+	    a2.addTextField('组件间隔 默认值20' , getdata('Space')||'')
 	    a2.addTextField('柱状图间隔 默认值2', getdata('KSize')||'')
       a2.addTextField('左边距 默认值5', getdata('Left_Padding')||'')
       a2.addDestructiveAction('全部恢复默认值')
