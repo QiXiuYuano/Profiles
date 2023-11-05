@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-# > TMDB
-DOMAIN-SUFFIX,themoviedb.org
 
-
-=======
-# > TMDB 网址
+# > TMDB 
 DOMAIN-SUFFIX,themoviedb.org
+DOMAIN-SUFFIX,tmdb.org
 
 >>>>>>> da6437b003ab70c552d3b4bd24d14489314520eb
 # > 流媒体 Dolphin 服务器
