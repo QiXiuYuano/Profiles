@@ -1,8 +1,9 @@
-# Emby 相关域名
-# > TMDB 
+
+# TMDB 相关域名，扫库刮削使用 
 DOMAIN-SUFFIX,themoviedb.org
 DOMAIN-SUFFIX,tmdb.org
 
+# Emby 相关域名
 # > 流媒体 Dolphin 服务器
 DOMAIN,public.emby.ws
 
