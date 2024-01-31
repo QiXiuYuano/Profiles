@@ -25,3 +25,5 @@ DOMAIN-SUFFIX,aca.best
 # infuse API
 DOMAIN,movie-api.infuse.im
 
+# Trakt API
+DOMAIN-SUFFIX,api.trakt.tv
