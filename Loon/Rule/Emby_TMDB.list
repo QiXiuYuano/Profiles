@@ -3,7 +3,16 @@
 DOMAIN-SUFFIX,themoviedb.org
 DOMAIN-SUFFIX,tmdb.org
 
-# Emby 相关域名
+# infuse API
+# DOMAIN,movie-api.infuse.im
+
+# Vidhub API
+DOMAIN,api.player.omiapps.com
+
+# Trakt API
+DOMAIN-SUFFIX,api.trakt.tv
+
+# Emby 服分流
 # > 流媒体 Dolphin 服务器
 DOMAIN,public.emby.ws
 
@@ -22,8 +31,4 @@ DOMAIN-SUFFIX,charontv.com
 # > 流媒体 ACA 机场服
 DOMAIN-SUFFIX,aca.best
 
-# infuse API
-DOMAIN,movie-api.infuse.im
 
-# Trakt API
-DOMAIN-SUFFIX,api.trakt.tv
