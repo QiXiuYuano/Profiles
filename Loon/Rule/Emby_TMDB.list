@@ -1,5 +1,5 @@
 
-# TMDB 相关域名，扫库刮削使用 
+# TMDB 域名分流
 DOMAIN-SUFFIX,themoviedb.org
 DOMAIN-SUFFIX,tmdb.org
 
@@ -13,22 +13,16 @@ DOMAIN,api.player.omiapps.com
 DOMAIN-SUFFIX,api.trakt.tv
 
 # Emby 服分流
-# > 流媒体 Dolphin 服务器
-DOMAIN,public.emby.ws
 
-# > 流媒体 nyamedia 体验服
-DOMAIN,emby.bangumi.ca
-
-# > 流媒体 MisakaF 体验服
+# > Emby MisakaF
 DOMAIN-SUFFIX,misakaf.org
 
-# > 流媒体 TreeDiagram 体验服
+# > Emby TreeDiagram
 DOMAIN,789.123456.al
 
-# > 流媒体 卡戎 体验服
-DOMAIN-SUFFIX,charontv.com
-
-# > 流媒体 ACA 机场服
+# > Emby ACA机场服
 DOMAIN-SUFFIX,aca.best
 
+# > Emby SYN机场服 公益服线路
+DOMAIN-SUFFIX,aca.best
 
