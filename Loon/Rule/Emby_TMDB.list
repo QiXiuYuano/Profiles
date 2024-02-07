@@ -1,18 +1,5 @@
 
-# TMDB 域名分流
-DOMAIN-SUFFIX,themoviedb.org
-DOMAIN-SUFFIX,tmdb.org
-
-# infuse API
-# DOMAIN,movie-api.infuse.im
-
-# Vidhub API
-DOMAIN,api.player.omiapps.com
-
-# Trakt API
-DOMAIN-SUFFIX,api.trakt.tv
-
-# Emby 服分流
+# 自用 Emby 服分流规则
 
 # > Emby MisakaF
 DOMAIN-SUFFIX,misakaf.org
