@@ -1,8 +1,0 @@
-﻿#!author = KOP-XIAO @xream @keywos @wuhu_zzz @整点猫咪
-#!homepage = https://gitlab.com/lodepuly/vpn_tool//tree/main/Tool/Loon/Plugin
-#
-#!date = 2023-09-08 13:48:55
-#!date = 2023-09-14 17:20:34
-
-[Script]
-generic script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/CloudflareSpeedtest.js, timeout = 10, tag = 节点网速测试, img-url = speedometer.system
