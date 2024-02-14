@@ -10,8 +10,8 @@ DOMAIN,789.123456.al
 # > Emby - ACA机场服
 DOMAIN-SUFFIX,aca.best
 
-# > Emby - SYN机场服 公益服线路
-DOMAIN,stream.ntrrr.top
+# > Emby - ntRRR 公益服线路
+DOMAIN-SUFFIX,ntrrr.top
 
 # > Emby - 江湖
 DOMAIN-SUFFIX,reddust.link
