@@ -1,22 +1,22 @@
-# > 自用 Emby 服分流规则
+# 自用 Emby 服分流规则
 
-# > Emby - MisakaF
+# MisakaF
 DOMAIN-SUFFIX,misakaf.org
 
-# > Emby - TreeDiagram
+# TreeDiagram
 DOMAIN,789.123456.al
 
-# > Emby - ACA 机场服
+#  ACA 机场服
 DOMAIN-SUFFIX,aca.best
 
-# > Emby - ntRRR 公益服线路
+# ntRRR 公益服线路
 DOMAIN-SUFFIX,ntrrr.top
 
-# > Emby - 江湖
+# 江湖
 DOMAIN-SUFFIX,reddust.link
 
-# > Emby - 纸片人
+# 纸片人
 DOMAIN-SUFFIX,embyplus.org
 
-# > Emby - 太空人
+# 太空人
 DOMAIN-SUFFIX,tkremby.xyz
