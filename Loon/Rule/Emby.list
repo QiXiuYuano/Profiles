@@ -10,13 +10,13 @@ DOMAIN,789.123456.al
 DOMAIN-SUFFIX,aca.best
 
 # ntRRR 
-DOMAIN-SUFFIX,ntrrr.top
+DOMAIN-KEYWORD,ntrrr
 
 # 江湖
 DOMAIN-SUFFIX,reddust.link
 
 # 纸片人
-DOMAIN-SUFFIX,embyplus.org
+DOMAIN-KEYWORD,embyplus
 
 # 太空人
 DOMAIN-SUFFIX,tkremby.xyz
