@@ -1,6 +1,54 @@
 
 # 一些漫画源规则分流
 
-# godamanga
+# G站漫画
 DOMAIN-SUFFIX,godamanga.com
+
+# 漫画狗
+DOMAIN-SUFFIX,dogemanga.com
+
+# 野蛮漫画
+DOMAIN-SUFFIX,yemancomic.com
+
+# 漫画人
+DOMAIN-SUFFIX,manhuaren.com
+
+# 漫画DB
+DOMAIN-SUFFIX,manhuadb.com
+
+# 拷贝漫画
+DOMAIN-SUFFIX,copymanga.tv
+
+# 无敌漫画
+DOMAIN-SUFFIX,55dmh.com
+
+# 古风漫画
+DOMAIN-KEYWORD,gufengmh
+
+# 古风漫画
+DOMAIN-SUFFIX,gufengmh9.com
+
+# 包子漫画
+DOMAIN-SUFFIX,baozimh.com
+
+# 动漫之家
+DOMAIN-SUFFIX,idzj.com
+
+# Zero搬运网
+DOMAIN-SUFFIX,zerobywns.com
+
+# vomic漫画
+DOMAIN-SUFFIX,vomicmh.com
+
+# Nico漫画
+DOMAIN-SUFFIX,nicohub.cc
+
+# Mangabz
+DOMAIN-SUFFIX,mangabz.com
+
+# Manhuagui
+DOMAIN-SUFFIX,manhuagui.com
+
+# Komiic漫画
+DOMAIN-SUFFIX,komiic.com
 
