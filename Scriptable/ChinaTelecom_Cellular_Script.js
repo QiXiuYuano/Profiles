@@ -6,6 +6,9 @@ const w = new ListWidget()
 const DynamicText = Color.dynamic(new Color('#111111'), new Color('#ffffff'))
 w.backgroundColor = Color.dynamic(new Color('#ffffff'), new Color('#1c1c1e'))
 
+const bgColor = new Color("c3c3c3")
+const limitColor = new Color("#fe5776")
+const unlimitColor = new Color("#4caf50")
 
 async function Run(){
   let Wsize=-1
@@ -137,9 +140,9 @@ async function Run(){
   }
   if (config.widgetFamily == 'medium' || Wsize == 1) {
 
-    const rowSpacing = 10; // 设置行间距
+    const rowSpacing = 5; // 设置行间距
     const leftPadding = Number(getdata('Left_Padding'))|| 5; // 设置左边距
-    const LimtUnlimitPadding=  Number(getdata('Space'))|| 20; //设置第一行通用与定向间距
+    const LimtUnlimitPadding=  Number(getdata('Space'))|| 45; //设置第一行通用与定向间距
 
     generateMediumWidget(Query ,str ,str1 ,w ,rowSpacing ,leftPadding ,LimtUnlimitPadding)
     if (Wsize == 1) { w.presentMedium() }
@@ -218,10 +221,10 @@ function generateSmallWidget(str ,str1, Widget ,Query){
   container.centerAlignContent();
 
   const upStack = container.addStack();
-  generateModule(upStack,str,Query.LimitLeft, Query.LimitAll)
+  generateModule(upStack,str,Query.LimitLeft, Query.LimitAll, bgColor, limitColor)
   container.addSpacer(10);
   const downStack = container.addStack();
-  generateModule(downStack,str1,Query.UNLimitLeft, Query.UNLimitAll)
+  generateModule(downStack,str1,Query.UNLimitLeft, Query.UNLimitAll, bgColor, unlimitColor)
 }
 
 function generateMediumWidget(Query ,str ,str1 ,Widget ,rowSpacing ,leftPadding ,LimtUnlimitPadding){
@@ -248,12 +251,12 @@ function generateMediumWidget(Query ,str ,str1 ,Widget ,rowSpacing ,leftPadding 
   container.centerAlignContent();
 
   const leftStack = container.addStack();
-  generateModule(leftStack,str,Query.LimitLeft, Query.LimitAll)
+  generateModule(leftStack,str,Query.LimitLeft, Query.LimitAll, bgColor, limitColor)
 
   container.addSpacer(LimtUnlimitPadding);
 
   const rightStack = container.addStack();
-  generateModule(rightStack,str1,Query.UNLimitLeft, Query.UNLimitAll)
+  generateModule(rightStack,str1,Query.UNLimitLeft, Query.UNLimitAll, bgColor, unlimitColor)
 
 
   const canvasWidth = 10;
@@ -262,7 +265,7 @@ function generateMediumWidget(Query ,str ,str1 ,Widget ,rowSpacing ,leftPadding 
   for (let i = 0; i <= 23; i++) {
     let columnImgStack = row3.addStack()
     columnImgStack.layoutVertically()
-    const iconImg = columnImgStack.addImage(HourKline(getobjdata(String(i)).limitchange, getobjdata(String(i)).unlimitchange, i,canvasWidth ,canvasHeight))
+    const iconImg = columnImgStack.addImage(HourKline(getobjdata(String(i)).limitchange, getobjdata(String(i)).unlimitchange, i,canvasWidth ,canvasHeight, limitColor, unlimitColor))
     iconImg.imageSize = new Size(canvasWidth, canvasHeight);
     // 在指定时间下方绘制时间数字
     if (i === 0 || i === 6 || i === 12 || i === 18 || i === 23) {
@@ -276,9 +279,9 @@ function generateMediumWidget(Query ,str ,str1 ,Widget ,rowSpacing ,leftPadding 
 
 }
 
-function generateModule(Widget,str,usage, total) {
+function generateModule(Widget,str,usage, total, bgColor, usageColor) {
 
-  Widget.setPadding(0, 0, 0, 15);
+  Widget.setPadding(0, 0, 0, 0);
 
   const column = Widget.addStack()
   column.layoutVertically()
@@ -293,7 +296,7 @@ function generateModule(Widget,str,usage, total) {
 
   let valRow = column.addStack()
   // valRow.layoutHorizontally()
-  const iconImg = valRow.addImage(UsageBar(usage, total))
+  const iconImg = valRow.addImage(UsageBar(usage, total, bgColor, usageColor))
   iconImg.imageSize = new Size(7, 42)
   valRow.addSpacer(5)//图片与文字距离
   let valRowLine = valRow.addStack()
@@ -313,7 +316,7 @@ function generateModule(Widget,str,usage, total) {
  * @param {*} haveGone 使用量
  * @returns 
  */
-function UsageBar(haveGone, total) {
+function UsageBar(haveGone, total, bgColor, usageColor) {
   const canvasWidth = 7;
   const canvasHeight = 40;
   const barCornerRadius = {x: 8 ,y: 2 };
@@ -328,7 +331,7 @@ function UsageBar(haveGone, total) {
   const bgPath = new Path();
   bgPath.addRoundedRect(new Rect(0, 0, canvasWidth, canvasHeight), barCornerRadius.x, barCornerRadius.y);
   context.addPath(bgPath);
-  context.setFillColor(new Color("#4d4d4d"));
+  context.setFillColor(bgColor);
   context.fillPath();
 
   // 创建柱状图用量路径
@@ -337,7 +340,7 @@ function UsageBar(haveGone, total) {
   const barRect = new Rect(0, canvasHeight - barHeight , canvasWidth, barHeight);
   barPath.addRoundedRect(barRect, barCornerRadius.x, barCornerRadius.y);
   context.addPath(barPath);
-  context.setFillColor(new Color("#1785ff")); // 填充蓝色
+  context.setFillColor(usageColor); // 填充蓝色
   context.fillPath();
 
   const Image = context.getImage(); // 获取绘制的图像
@@ -352,17 +355,16 @@ function UsageBar(haveGone, total) {
  * @param {*} t 时间
  * @returns image
  */
-function HourKline(limit, unlimit, t ,width ,height) {
+function HourKline(limit, unlimit, t ,width ,height, limitColor, unlimitColor) {
 
   let All = limit + unlimit
-
-  if (All >= 0 && All <= 10240) ThereShold = 10240//10MB
-  if (All > 10240 && All <= 102400) ThereShold = 102400//100MB
-  if (All > 102400 && All <= 512000) ThereShold = 512000//500MB
-  if (All > 512000 && All <= 1048576) ThereShold = 1048576//1GB
+  ThereShold = 5242880;
+  if (All >= 0 && All <= 1048576) ThereShold = 1048576//1GB
   if (All > 1048576 && All <= 5242880) ThereShold = 5242880//5GB
-  if (All > 5242880 && All <= 20971520) ThereShold = 20971520//20GB
-  if (All > 20971520) ThereShold = 1048576000//100GB
+  if (All > 5242880 && All <= 10485760) ThereShold = 10485760//10GB
+  if (All > 10485760 && All <= 20971520) ThereShold = 20971520//20GB
+  if (All > 20971520 && All <= 52428800) ThereShold = 52428800//50GB
+  if (All > 52428800) ThereShold = 1048576000//100GB
 
   const context = new DrawContext()//创建图形画布
   context.opaque = false; // 设置为透明背景
@@ -392,10 +394,10 @@ function HourKline(limit, unlimit, t ,width ,height) {
   barPath.addRoundedRect(barunlimitRect, 0, 0);
 
   // 设置不同的填充颜色
-  context.setFillColor(new Color("#fe708b")); // 设置limit部分的填充颜色
+  context.setFillColor(limitColor); // 设置limit部分的填充颜色
   context.fill(barlimitRect);
 
-  context.setFillColor(new Color("#8676ff")); // 设置unlimit部分的填充颜色
+  context.setFillColor(unlimitColor); // 设置unlimit部分的填充颜色
   context.fill(barunlimitRect);
 
   return context.getImage()
