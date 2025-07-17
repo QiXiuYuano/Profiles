@@ -160,7 +160,9 @@ content #write>h5.md-focus:before {
     font-style: normal;
 }
 
-#write h1,
+#write h1 {
+    text-align: center;
+}
 #write h2 {
     /* text-align: center; */
     margin-top: 2rem;
