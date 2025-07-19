@@ -1,15 +1,16 @@
-name: Generate qxy_icons.json in Surge
+name: Auto Generate qxy_icons.json in Surge
 
 on:
   push:
     paths:
-      - 'Surge/icon/**'
+      - 'Surge/icon/**'  
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: 拉取仓库
+      - name: 检出仓库
         uses: actions/checkout@v3
 
       - name: 设置 Python 环境
@@ -17,12 +18,11 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: 进入子目录并运行脚本
+      - name: 执行生成 JSON 脚本
         working-directory: Surge
-        run: |
-          python generate_json.py
+        run: python generate_json.py
 
-      - name: 提交并推送 JSON
+      - name: 提交并推送更新
         working-directory: Surge
         run: |
           git config user.name "github-actions[bot]"

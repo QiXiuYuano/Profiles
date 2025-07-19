@@ -4,9 +4,9 @@ from datetime import datetime
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ICON_DIR = os.path.join(BASE_DIR, 'icon')
-JSON_FILE = os.path.join(BASE_DIR, 'icons.json')
+JSON_FILE = os.path.join(BASE_DIR, 'qxy_icons.json')
 
-GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/QiXiuYuano/Profiles/Surge'
+GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/Surge'
 
 def generate_json():
     icons = []
