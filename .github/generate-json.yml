@@ -1,0 +1,33 @@
+name: Generate icons.json
+
+on:
+  push:
+    paths:
+      - 'icon/**'
+      - '.github/workflows/generate-json.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉取代码仓库
+        uses: actions/checkout@v3
+
+      - name: 设置 Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: 安装依赖（如有）
+        run: pip install --upgrade pip
+
+      - name: 执行脚本生成 qxy_icons.json
+        run: python generate_json.py
+
+      - name: 提交并推送更改
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add qxy_icons.json
+          git commit -m "自动更新 qxy_icons.json"
+          git push
