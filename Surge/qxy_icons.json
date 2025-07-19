@@ -1,0 +1,26 @@
+{
+  "name": "QiXiuyuan自用图标库",
+  "description": "存放其他公开图标库没有，但自用需要的图标",
+  "icons": [
+    {
+      "name": "Oracle_Cloud",
+      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/Surge/icon/Oracle_Cloud.png"
+    },
+    {
+      "name": "EGA",
+      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/Surge/icon/EGA.png"
+    },
+    {
+      "name": "SYN_Circular",
+      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/Surge/icon/SYN_Circular.png"
+    },
+    {
+      "name": "oracle",
+      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/Surge/icon/oracle.png"
+    },
+    {
+      "name": "SYN_Square",
+      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/Surge/icon/SYN_Square.png"
+    }
+  ]
+}
