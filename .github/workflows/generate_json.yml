@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'Surge/icon/**'  
+  workflow_dispatch: 
 
 jobs:
   build:
