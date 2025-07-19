@@ -1,4 +1,4 @@
-name: Auto Generate qxy_icons.json in Surge
+name: Auto Generate qxy_icons.json
 
 on:
   push:
