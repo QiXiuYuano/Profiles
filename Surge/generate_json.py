@@ -11,7 +11,7 @@ GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/Su
 def generate_json():
     icons = []
     for filename in os.listdir(ICON_DIR):
-        if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.svg', '.webp')):
+        if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.svg', '.webp', '.ico')):
             icon_name = os.path.splitext(filename)[0]
             url = f'{GITHUB_RAW_BASE}/icon/{filename}'
             icons.append({"name": icon_name, "url": url})
