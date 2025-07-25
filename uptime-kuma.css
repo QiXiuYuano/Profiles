@@ -18,7 +18,8 @@
 
   /* Light theme base colors */
   --color-bg: #fbfbfc;
-  --color-text-primary: #566573;
+  /* --color-text-primary: #566573; */
+  --color-text-primary: #141414;
   --color-text-heading: #141414;
   --color-text-secondary: #85929e;
   --color-block-bg: #fff;
@@ -32,7 +33,8 @@
   --color-btn-secondary-border: rgba(0, 0, 0, .16);
 
   /* Sizing */
-  --size-container-width: 864px;
+  /* --size-container-width: 864px; */
+  --size-container-width: 1200px;
   --size-edit-container-width: 1164px;
   --size-logo-width: 48px;
   --size-logo-height: 48px;
@@ -87,55 +89,46 @@
 /* BASE STRUCTURE
 -------------------------------------------------- */
 
-body:not(:has(.edit)) {
+/* body:not(:has(.edit)) {
   background-color: var(--color-bg) !important;
   color: var(--color-text-primary) !important;
-}
+} */
 
 .container {
   margin-top: 0 !important;
-  padding: var(--spacing-32) var(--spacing-20) 0;
+  padding: var(--spacing-32) var(--spacing-24) 0;
   max-width: var(--size-container-width);
 }
 
+
 /* Link (excluding button) */
-a:not(.btn),
+/* a:not(.btn),
 .dark a:not(.btn) {
   color: inherit;
 }
 a:not(.btn):hover,
 .dark a:not(.btn):hover {
   color: var(--color-blue);
-}
+} */
 
 /* HEADER
 -------------------------------------------------- */
-
-/* Wrapper for logo and title */
 .title-flex {
-  margin-bottom: var(--spacing-32) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-/* Center the logo */
-.logo-wrapper {
-  margin: 0 auto;
+.logo-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* logo 与文字的间距 */
 }
 
-/* Resize the logo */
-.logo-wrapper img[data-v-b8247e57],
 .logo {
-  width: var(--size-logo-width) !important;
-  height: var(--size-logo-height) !important;
-}
-
-/* Remove the margin of the logo */
-[dir="ltr"] .logo {
-  margin-right: 0 !important;
-}
-
-/* Remove the title adjacent to the logo */
-span[data-v-7d4a7f28] {
-  display: none;
+  width: var(--size-logo-width);
+  height: var(--size-logo-height);
 }
 
 /* ADMIN BUTTONS
