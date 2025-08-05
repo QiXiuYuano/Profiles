@@ -2,24 +2,29 @@ import os
 import json
 from datetime import datetime
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ICON_DIR = os.path.join(BASE_DIR, 'icon')
-JSON_FILE = os.path.join(BASE_DIR, 'qxy_icons.json')
+# 仓库根目录
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+ICON_DIR = os.path.join(ROOT_DIR, 'icon')               
+JSON_FILE = os.path.join(ROOT_DIR, 'qxy_icons.json')      
 
+# GitHub Raw 图标访问路径
 GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/QiXiuYuano/Profiles/main'
 
 def generate_json():
     icons = []
+
+    if not os.path.exists(ICON_DIR):
+        raise FileNotFoundError(f"图标目录不存在: {ICON_DIR}")
+
     for filename in os.listdir(ICON_DIR):
         if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.svg', '.webp', '.ico')):
             icon_name = os.path.splitext(filename)[0]
             url = f'{GITHUB_RAW_BASE}/icon/{filename}'
             icons.append({"name": icon_name, "url": url})
 
-    # today = datetime.today().strftime('%y%m%d')
     data = {
         "name": "QiXiuyuan自用图标库",
-        "description": f"存放、收集个人自用的图标",
+        "description": "存放、收集个人自用的图标",
         "icons": icons
     }
 
