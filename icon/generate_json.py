@@ -6,7 +6,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ICON_DIR = os.path.join(BASE_DIR, 'icon')
 JSON_FILE = os.path.join(BASE_DIR, 'qxy_icons.json')
 
-GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/Surge'
+GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/QiXiuYuano/Profiles/main'
 
 def generate_json():
     icons = []
@@ -19,7 +19,7 @@ def generate_json():
     # today = datetime.today().strftime('%y%m%d')
     data = {
         "name": "QiXiuyuan自用图标库",
-        "description": f"存放其他公开图标库没有，但自用需要的图标",
+        "description": f"存放、收集个人自用的图标",
         "icons": icons
     }
 
