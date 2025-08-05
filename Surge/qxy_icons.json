@@ -3,10 +3,6 @@
   "description": "存放其他公开图标库没有，但自用需要的图标",
   "icons": [
     {
-      "name": "oracle",
-      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/Surge/icon/oracle.png"
-    },
-    {
       "name": "sntp_lite",
       "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/Surge/icon/sntp_lite.png"
     }
