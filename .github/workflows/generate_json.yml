@@ -3,8 +3,8 @@ name: Auto Generate qxy_icons.json
 on:
   push:
     paths:
-      - 'Surge/icon/**'  
-  workflow_dispatch: 
+      - 'icon/**' 
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -22,15 +22,22 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: 执行生成 JSON 脚本
-        working-directory: Surge
-        run: python generate_json.py
+      - name: 显示目录结构（调试用，可移除）
+        run: ls -R
 
-      - name: 提交并推送更新
-        working-directory: Surge
+      - name: 执行生成 JSON 脚本
+        run: python .github/generate_json.py  
+
+      - name: 提交并推送更新（如果有变化）
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add qxy_icons.json
-          git commit -m "自动更新 Surge/qxy_icons.json"
-          git push
+
+          # 仅当文件有变更时才提交
+          if ! git diff --cached --quiet; then
+            git commit -m "自动更新 qxy_icons.json"
+            git push
+          else
+            echo "无变化，跳过提交。"
+          fi
