@@ -3,28 +3,48 @@
   "description": "存放、收集个人自用的图标",
   "icons": [
     {
-      "name": "chatgpt",
-      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/chatgpt.PNG"
+      "name": "oracle",
+      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/oracle.png"
+    },
+    {
+      "name": "SYN_Square",
+      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/SYN_Square.png"
+    },
+    {
+      "name": "deepflood",
+      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/deepflood.ico"
+    },
+    {
+      "name": "GeNie",
+      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/GeNie.png"
+    },
+    {
+      "name": "qixiuyuan",
+      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/qixiuyuan.png"
     },
     {
       "name": "SYN_Circular",
       "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/SYN_Circular.png"
     },
     {
-      "name": "oracle(2)",
-      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/oracle(2).png"
+      "name": "Uptime-Kuma-Logo",
+      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/Uptime-Kuma-Logo.png"
+    },
+    {
+      "name": "GeNie",
+      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/GeNie.ico"
+    },
+    {
+      "name": "sntp_lite1",
+      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/sntp_lite1.png"
     },
     {
       "name": "sntp_lite",
       "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/sntp_lite.png"
     },
     {
-      "name": "trakt",
-      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/trakt.png"
-    },
-    {
-      "name": "qixiuyuan",
-      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/qixiuyuan.png"
+      "name": "chatgpt",
+      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/chatgpt.PNG"
     },
     {
       "name": "SVCloud",
@@ -35,36 +55,20 @@
       "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/forward-widget.png"
     },
     {
-      "name": "sntp_lite1",
-      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/sntp_lite1.png"
-    },
-    {
-      "name": "GeNie",
-      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/GeNie.ico"
-    },
-    {
-      "name": "oracle(1)",
-      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/oracle(1).png"
-    },
-    {
       "name": "GeNie_square",
       "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/GeNie_square.png"
     },
     {
-      "name": "SYN_Square",
-      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/SYN_Square.png"
+      "name": "oracle(2)",
+      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/oracle(2).png"
     },
     {
-      "name": "oracle",
-      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/oracle.png"
+      "name": "trakt",
+      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/trakt.png"
     },
     {
-      "name": "Uptime-Kuma-Logo",
-      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/Uptime-Kuma-Logo.png"
-    },
-    {
-      "name": "GeNie",
-      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/GeNie.png"
+      "name": "oracle(1)",
+      "url": "https://raw.githubusercontent.com/QiXiuYuano/Profiles/main/icon/oracle(1).png"
     }
   ]
 }
