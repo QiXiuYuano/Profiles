@@ -1,7 +1,0 @@
-payload:
-  # 内容：Emby服务器地址
-  - DOMAIN,public.emby.ws
-  - DOMAIN,emby.bangumi.ca
-  - DOMAIN-SUFFIX,misakaf.org
-  - DOMAIN,789.123456.al
-  - DOMAIN-SUFFIX,charontv.com
