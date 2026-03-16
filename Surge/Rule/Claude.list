@@ -1,0 +1,15 @@
+# Claude
+
+PROCESS-NAME,Claude
+PROCESS-NAME,Claude Helper
+
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,claude.com
+
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,api.anthropic.com
+DOMAIN-SUFFIX,console.anthropic.com
+DOMAIN-SUFFIX,statsig.anthropic.com
+
+DOMAIN-SUFFIX,usefathom.com
