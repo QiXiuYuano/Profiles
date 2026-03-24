@@ -5,10 +5,10 @@ from datetime import datetime
 # 仓库根目录
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 ICON_DIR = os.path.join(ROOT_DIR, 'icon')               
-JSON_FILE = os.path.join(ROOT_DIR, 'qxy_icons.json')      
+JSON_FILE = os.path.join(ROOT_DIR, 'staryun_icons.json')      
 
 # GitHub Raw 图标访问路径
-GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/QiXiuYuano/Profiles/main'
+GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/StarYunLee/Profiles/main'
 
 def generate_json():
     icons = []
@@ -23,7 +23,7 @@ def generate_json():
             icons.append({"name": icon_name, "url": url})
 
     data = {
-        "name": "QiXiuyuan自用图标库",
+        "name": "StarYunLee自用图标库",
         "description": "存放、收集个人自用的图标",
         "icons": icons
     }
