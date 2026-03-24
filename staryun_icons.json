@@ -39,12 +39,12 @@
       "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/poly.png"
     },
     {
-      "name": "sntp_lite1",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/sntp_lite1.png"
-    },
-    {
       "name": "chatgpt",
       "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/chatgpt.PNG"
+    },
+    {
+      "name": "sntp_lite",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/sntp_lite.png"
     }
   ]
 }
