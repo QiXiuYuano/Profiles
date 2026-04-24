@@ -3,48 +3,52 @@
   "description": "存放、收集个人自用的图标",
   "icons": [
     {
-      "name": "GeNie_square",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/GeNie_square.png"
-    },
-    {
-      "name": "trakt",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/trakt.png"
-    },
-    {
-      "name": "forward-widget",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/forward-widget.png"
-    },
-    {
-      "name": "qixiuyuan",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/qixiuyuan.png"
-    },
-    {
-      "name": "oracle",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/oracle.png"
-    },
-    {
-      "name": "GeNie",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/GeNie.png"
-    },
-    {
-      "name": "paypal",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/paypal.png"
-    },
-    {
-      "name": "Uptime-Kuma-Logo",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/Uptime-Kuma-Logo.png"
+      "name": "tianyue",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/tianyue.png"
     },
     {
       "name": "chatgpt",
       "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/chatgpt.png"
     },
     {
-      "name": "poly",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/poly.png"
+      "name": "GeNie_square",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/GeNie_square.png"
     },
     {
       "name": "sntp_lite",
       "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/sntp_lite.png"
+    },
+    {
+      "name": "Uptime-Kuma-Logo",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/Uptime-Kuma-Logo.png"
+    },
+    {
+      "name": "paypal",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/paypal.png"
+    },
+    {
+      "name": "trakt",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/trakt.png"
+    },
+    {
+      "name": "oracle",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/oracle.png"
+    },
+    {
+      "name": "forward-widget",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/forward-widget.png"
+    },
+    {
+      "name": "poly",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/poly.png"
+    },
+    {
+      "name": "GeNie",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/GeNie.png"
+    },
+    {
+      "name": "qixiuyuan",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/qixiuyuan.png"
     }
   ]
 }
