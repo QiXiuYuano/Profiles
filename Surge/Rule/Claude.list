@@ -3,6 +3,9 @@
 PROCESS-NAME,Claude
 PROCESS-NAME,Claude Helper
 
+DOMAIN,api.anthropic.com
+DOMAIN,a-api.anthropic.com
+
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,claudeusercontent.com
 DOMAIN-SUFFIX,claude.com
