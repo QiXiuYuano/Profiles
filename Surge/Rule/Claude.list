@@ -3,17 +3,28 @@
 PROCESS-NAME,Claude
 PROCESS-NAME,Claude Helper
 
-DOMAIN,api.anthropic.com
-DOMAIN,a-api.anthropic.com
-
+# Core
+DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
-DOMAIN-SUFFIX,claudeusercontent.com
 DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,clau.de
+DOMAIN-SUFFIX,claudeusercontent.com
 
-DOMAIN-SUFFIX,anthropic.com
-DOMAIN-SUFFIX,api.anthropic.com
-DOMAIN-SUFFIX,console.anthropic.com
-DOMAIN-SUFFIX,statsig.anthropic.com
-DOMAIN-SUFFIX,anthropic.com
+# Claude MCP / content
+DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-SUFFIX,claudemcpcontent.com
 
-DOMAIN-SUFFIX,usefathom.com
+# Auth / CDN / static - 可选但可以保留
+DOMAIN,anthropic.auth0.com
+DOMAIN,servd-anthropic-website.b-cdn.net
+DOMAIN,anthropic.com.cdn.cloudflare.net
+
+# Fathom - 建议用精确域名，不要直接 usefathom.com 全后缀
+DOMAIN,cdn.usefathom.com
+
+# IP fallback
+# IP-CIDR,160.79.104.0/21,no-resolve
+# IP-CIDR6,2607:6bc0::/32,no-resolve
+IP-CIDR,160.79.104.0/23,no-resolve
+IP-CIDR6,2607:6bc0::/48,no-resolve
+IP-ASN,399358,no-resolve
