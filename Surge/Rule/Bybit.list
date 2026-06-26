@@ -1,0 +1,11 @@
+# ===== Bybit Core Only =====
+DOMAIN-SUFFIX,bybit.com
+DOMAIN-SUFFIX,bybit.net
+DOMAIN-SUFFIX,bybit.org
+DOMAIN-SUFFIX,bybitglobal.com
+DOMAIN-SUFFIX,bybit-exchange.com
+DOMAIN-SUFFIX,bybit.cloud
+DOMAIN-SUFFIX,bytick.com
+
+# WebSocket / Trading
+DOMAIN-SUFFIX,ws.bybit.com
