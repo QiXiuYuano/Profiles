@@ -6,6 +6,8 @@ DOMAIN-SUFFIX,bybitglobal.com
 DOMAIN-SUFFIX,bybit-exchange.com
 DOMAIN-SUFFIX,bybit.cloud
 DOMAIN-SUFFIX,bytick.com
+DOMAIN-SUFFIX,byapps.net
+DOMAIN-SUFFIX,byd3c3.com
 
 # WebSocket / Trading
 DOMAIN-SUFFIX,ws.bybit.com
