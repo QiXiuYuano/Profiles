@@ -1,39 +1,51 @@
-# NAME: Bybit Optimized
-# AUTHOR: U0hZiY
-# DESC: Optimized Bybit rules with latest domains
-# NOTE: Personal fork for backup and potential future customization.
+# NAME: Bybit Rules
+# AUTHOR: StarYunLee.
 # UPDATED: 2026-06-26
 
-# Specific domains
-DOMAIN,monitor-frontend-collector.a.bybit-aws.com
-DOMAIN,api3.bybit.biz
-DOMAIN,www.bybits.org
-
-# Main domain suffixes
+# --- Core Bybit Domains ---
 DOMAIN-SUFFIX,bybit.com
 DOMAIN-SUFFIX,bybit.biz
+DOMAIN-SUFFIX,bybit.net
+DOMAIN-SUFFIX,bybit.cloud
+DOMAIN-SUFFIX,bybitglobal.com
+DOMAIN-SUFFIX,bybit-global.com
+
+# --- API / Platform Domains ---
+DOMAIN-SUFFIX,bybitapi.com
+DOMAIN-SUFFIX,byapis.com
+DOMAIN-SUFFIX,bytick.com
+DOMAIN-SUFFIX,byapps.net
+
+# --- Extended / Variant Domains ---
 DOMAIN-SUFFIX,bybdc6.com
 DOMAIN-SUFFIX,byabcde.com
-DOMAIN-SUFFIX,byapps.net
 DOMAIN-SUFFIX,byd3c3.com
-
-# Additional Bybit related domains
-DOMAIN-SUFFIX,bybit.cloud
-DOMAIN-SUFFIX,bybit.global
-DOMAIN-SUFFIX,bybit.co.kr
-DOMAIN-SUFFIX,bybit.com.br
-DOMAIN-SUFFIX,bybitapi.com
-DOMAIN-SUFFIX,bybit.net
+DOMAIN-SUFFIX,bycsi.com
+DOMAIN-SUFFIX,bycbe.com
+DOMAIN-SUFFIX,bymj.io
 DOMAIN-SUFFIX,bybits.org
 
-# Third-party services used by Bybit
+# --- Monitoring / Tracking / CDN-like ---
+DOMAIN-SUFFIX,ffbbbdc6d3c353211fe2ba39c9f744cd.com
+DOMAIN-SUFFIX,ffe390afd658c19dcbf707e0597b846d.de
+
+# --- Third-party Services ---
+DOMAIN-SUFFIX,appsflyer.com
 DOMAIN-SUFFIX,appsflyersdk.com
 DOMAIN-SUFFIX,geetest.com
 
-# User-Agent rules for mobile app
+# --- Specific / Exact Domains ---
+DOMAIN,monitor-frontend-collector.a.bybit-aws.com
+DOMAIN,api3.bybit.biz
+DOMAIN,www.bybits.org
+DOMAIN,bybit-exchange.github.io
+DOMAIN,app-measurement.com
+DOMAIN,bybit.ada.support
+
+# --- User-Agent Rules (Mobile App) ---
 USER-AGENT,*Bybit*
 USER-AGENT,Bybit*
 
-# Process rules for mobile app (backup)
+# --- Process Rules (Android) ---
 PROCESS-NAME,com.bybit.app
 PROCESS-NAME,com.bybit.global
