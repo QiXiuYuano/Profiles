@@ -50,3 +50,6 @@ USER-AGENT,Bybit*
 # --- Process Rules (Android) ---
 PROCESS-NAME,com.bybit.app
 PROCESS-NAME,com.bybit.global
+
+# --- Bybit EU ---
+DOMAIN-SUFFIX,bybit.eu
