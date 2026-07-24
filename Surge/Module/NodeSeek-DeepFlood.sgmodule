@@ -1,0 +1,25 @@
+#!name=NodeSeek & DeepFlood 签到
+#!desc=自动抓取 Cookie 并定时签到。安装后打开站点个人页触发 Token 捕获；默认每天 09:00 签到。
+#!category=Checkin
+#!arguments=Cron:0 9 * * *,RandomChickenLeg:false
+#!arguments-desc=Cron=签到定时表达式（默认每天 09:00）\nRandomChickenLeg=是否随机鸡腿（true/false，默认 false=固定 5 个）
+
+[General]
+# 开启后可抓到 Cookie；不需要时也可保持开启
+force-http-engine-hosts = %APPEND% www.nodeseek.com, www.deepflood.com
+
+[Script]
+# ---------- NodeSeek：抓 Token ----------
+NodeSeek-Token = type=http-response, pattern=^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/.+phone=1, script-path=https://raw.githubusercontent.com/StarYunLee/Profiles/main/Surge/Script/nodeseek.js, requires-body=true, max-size=1048576, timeout=60, script-update-interval=0
+
+# ---------- NodeSeek：定时签到 ----------
+NodeSeek-Checkin = type=cron, cronexp={{{Cron}}}, wake-system=1, timeout=60, script-path=https://raw.githubusercontent.com/StarYunLee/Profiles/main/Surge/Script/nodeseek.js, script-update-interval=0, argument=nodeseek_default={{{RandomChickenLeg}}}
+
+# ---------- DeepFlood：抓 Token ----------
+DeepFlood-Token = type=http-response, pattern=^https:\/\/www\.deepflood\.com\/api\/account\/getInfo\/.+phone=1, script-path=https://raw.githubusercontent.com/StarYunLee/Profiles/main/Surge/Script/deepflood.js, requires-body=true, max-size=1048576, timeout=60, script-update-interval=0
+
+# ---------- DeepFlood：定时签到 ----------
+DeepFlood-Checkin = type=cron, cronexp={{{Cron}}}, wake-system=1, timeout=60, script-path=https://raw.githubusercontent.com/StarYunLee/Profiles/main/Surge/Script/deepflood.js, script-update-interval=0, argument=deepflood_default={{{RandomChickenLeg}}}
+
+[MITM]
+hostname = %APPEND% www.nodeseek.com, www.deepflood.com
