@@ -8,11 +8,13 @@
 # NodeSeek - 捕获 Token
 NodeSeekToken = type=http-response, pattern=^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/.+\?readme=1&signature=1&phone=1, requires-body=true, timeout=60, script-path=https://raw.githubusercontent.com/StarYunLee/Profiles/main/Surge/Script/nodeseek.js
 
+# NodeSeek - 定时签到
 NodeSeekCheckin = type=cron, cronexp={{{Cron}}}, timeout=60, wake-system=1, script-path=https://raw.githubusercontent.com/StarYunLee/Profiles/main/Surge/Script/nodeseek.js, argument={{{RandomChickenLeg}}}
 
 # DeepFlood - 捕获 Token
 DeepFloodToken = type=http-response, pattern=^https:\/\/www\.deepflood\.com\/api\/account\/getInfo\/(.+)phone=1, requires-body=true, timeout=60, script-path=https://raw.githubusercontent.com/StarYunLee/Profiles/main/Surge/Script/deepflood.js
 
+# DeepFlood - 定时签到
 DeepFloodCheckin = type=cron, cronexp={{{Cron}}}, timeout=60, wake-system=1, script-path=https://raw.githubusercontent.com/StarYunLee/Profiles/main/Surge/Script/deepflood.js, argument={{{RandomChickenLeg}}}
 
 [MITM]
