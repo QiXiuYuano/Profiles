@@ -5,17 +5,17 @@
 #!arguments-desc=Cron：签到定时（默认每天 09:00）\nRandomChickenLeg：false=固定 5 鸡腿，true=随机
 
 [Script]
-# NodeSeek - 捕获 Token（script-path 用原作者已验证可弹通知的地址）
-NodeSeekToken = type=http-response, pattern=^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/.+\?readme=1&signature=1&phone=1, requires-body=true, timeout=60, script-path=https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js
+# NodeSeek - 捕获 Token
+NodeSeekToken = type=http-response, pattern=^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/.+\?readme=1&signature=1&phone=1, requires-body=true, timeout=60, script-path=https://raw.githubusercontent.com/StarYunLee/Profiles/main/Surge/Script/nodeseek.js
 
-# NodeSeek - 定时签到（Profiles 脚本，支持模块参数 RandomChickenLeg）
-NodeSeekCheckin = type=cron, cronexp={{{Cron}}}, timeout=60, wake-system=1, script-path=https://raw.githubusercontent.com/StarYunLee/Profiles/main/Surge/Script/nodeseek.js, argument=nodeseek_default={{{RandomChickenLeg}}}
+# NodeSeek - 定时签到（argument 直接传值，不包 key）
+NodeSeekCheckin = type=cron, cronexp={{{Cron}}}, timeout=60, wake-system=1, script-path=https://raw.githubusercontent.com/StarYunLee/Profiles/main/Surge/Script/nodeseek.js, argument={{{RandomChickenLeg}}}
 
-# DeepFlood - 捕获 Token（script-path 用原作者已验证可弹通知的地址）
-DeepFloodToken = type=http-response, pattern=^https:\/\/www\.deepflood\.com\/api\/account\/getInfo\/(.+)phone=1, requires-body=true, timeout=60, script-path=https://raw.githubusercontent.com/QiXiuYuano/Scripts/main/DeepFlood/deepflood.js
+# DeepFlood - 捕获 Token
+DeepFloodToken = type=http-response, pattern=^https:\/\/www\.deepflood\.com\/api\/account\/getInfo\/(.+)phone=1, requires-body=true, timeout=60, script-path=https://raw.githubusercontent.com/StarYunLee/Profiles/main/Surge/Script/deepflood.js
 
-# DeepFlood - 定时签到（Profiles 脚本，支持模块参数 RandomChickenLeg）
-DeepFloodCheckin = type=cron, cronexp={{{Cron}}}, timeout=60, wake-system=1, script-path=https://raw.githubusercontent.com/StarYunLee/Profiles/main/Surge/Script/deepflood.js, argument=deepflood_default={{{RandomChickenLeg}}}
+# DeepFlood - 定时签到（argument 直接传值，不包 key）
+DeepFloodCheckin = type=cron, cronexp={{{Cron}}}, timeout=60, wake-system=1, script-path=https://raw.githubusercontent.com/StarYunLee/Profiles/main/Surge/Script/deepflood.js, argument={{{RandomChickenLeg}}}
 
 [MITM]
 hostname = %APPEND% www.nodeseek.com, www.deepflood.com
