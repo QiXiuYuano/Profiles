@@ -41,25 +41,7 @@ const notify = $.isNode() ? require('./sendNotify') : '';
 //debug
 $.is_debug = ($.isNode() ? process.env.IS_DEDUG : $.getdata('is_debug')) || 'false';
 //是否固定鸡腿
-// random: false=固定5鸡腿, true=随机；优先 $argument，失败则回落持久化/默认
-$.is_default = (function () {
-    try {
-        if (typeof $argument !== 'undefined' && $argument) {
-            var params = {}, parts = String($argument).split('&');
-            for (var n = 0; n < parts.length; n++) {
-                var s = parts[n]; if (!s) continue;
-                var i = s.indexOf('=');
-                var k = i < 0 ? s : s.slice(0, i);
-                var v = i < 0 ? '' : s.slice(i + 1);
-                try { k = decodeURIComponent(k); } catch (e) {}
-                try { v = decodeURIComponent(v); } catch (e) {}
-                params[k] = v;
-            }
-            if (params['deepflood_default'] !== undefined && params['deepflood_default'] !== '') return String(params['deepflood_default']);
-        }
-    } catch (e) {}
-    return ($.isNode() ? process.env['deepflood_default'] : $.getdata('deepflood_default')) || 'false';
-})();
+$.is_default = (typeof $argument !== 'undefined' && $argument && $argument !== '') ? $argument : (($.isNode() ? process.env['deepflood_default'] : $.getdata('deepflood_default')) || 'false');
 //------------------------------------------
 async function main() {
     for (let user of $.userList) {
