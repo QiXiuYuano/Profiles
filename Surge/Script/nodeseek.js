@@ -37,15 +37,23 @@ const notify = $.isNode() ? require('./sendNotify') : '';
 //debug
 $.is_debug = ($.isNode() ? process.env.IS_DEDUG : $.getdata('is_debug')) || 'false';
 //是否固定鸡腿
-// random: false=固定5鸡腿, true=随机；优先读脚本 argument，其次持久化/环境变量
+// random: false=固定5鸡腿, true=随机；优先 $argument，失败则回落持久化/默认
 $.is_default = (function () {
-    const fromArg = (typeof $argument !== 'undefined' && $argument)
-        ? (Object.fromEntries(String($argument).split('&').map(s => {
-            const i = s.indexOf('=');
-            return i < 0 ? [s, ''] : [decodeURIComponent(s.slice(0, i)), decodeURIComponent(s.slice(i + 1))];
-        }))['nodeseek_default']
-        : undefined;
-    if (fromArg !== undefined && fromArg !== '') return String(fromArg);
+    try {
+        if (typeof $argument !== 'undefined' && $argument) {
+            var params = {}, parts = String($argument).split('&');
+            for (var n = 0; n < parts.length; n++) {
+                var s = parts[n]; if (!s) continue;
+                var i = s.indexOf('=');
+                var k = i < 0 ? s : s.slice(0, i);
+                var v = i < 0 ? '' : s.slice(i + 1);
+                try { k = decodeURIComponent(k); } catch (e) {}
+                try { v = decodeURIComponent(v); } catch (e) {}
+                params[k] = v;
+            }
+            if (params['nodeseek_default'] !== undefined && params['nodeseek_default'] !== '') return String(params['nodeseek_default']);
+        }
+    } catch (e) {}
     return ($.isNode() ? process.env['nodeseek_default'] : $.getdata('nodeseek_default')) || 'false';
 })();
 //------------------------------------------
