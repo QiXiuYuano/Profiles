@@ -1,6 +1,5 @@
-import os
 import json
-from datetime import datetime
+import os
 
 # 仓库根目录
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -16,7 +15,7 @@ def generate_json():
     if not os.path.exists(ICON_DIR):
         raise FileNotFoundError(f"图标目录不存在: {ICON_DIR}")
 
-    for filename in os.listdir(ICON_DIR):
+    for filename in sorted(os.listdir(ICON_DIR), key=str.casefold):
         if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.svg', '.webp', '.ico')):
             icon_name = os.path.splitext(filename)[0]
             url = f'{GITHUB_RAW_BASE}/icon/{filename}'
@@ -30,6 +29,7 @@ def generate_json():
 
     with open(JSON_FILE, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+        f.write('\n')
 
 if __name__ == '__main__':
     generate_json()

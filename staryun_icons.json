@@ -3,20 +3,32 @@
   "description": "存放、收集个人自用的图标",
   "icons": [
     {
-      "name": "qixiuyuan",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/qixiuyuan.png"
+      "name": "Bitwarden",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/Bitwarden.png"
     },
     {
-      "name": "Uptime-Kuma-Logo",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/Uptime-Kuma-Logo.png"
+      "name": "chatgpt",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/chatgpt.png"
+    },
+    {
+      "name": "forward-widget",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/forward-widget.png"
     },
     {
       "name": "GeNie",
       "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/GeNie.png"
     },
     {
-      "name": "tianyue",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/tianyue.png"
+      "name": "GeNie_square",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/GeNie_square.png"
+    },
+    {
+      "name": "nodeseek-white",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/nodeseek-white.png"
+    },
+    {
+      "name": "nodeseek",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/nodeseek.png"
     },
     {
       "name": "oracle",
@@ -31,44 +43,32 @@
       "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/poly.png"
     },
     {
-      "name": "nodeseek",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/nodeseek.png"
-    },
-    {
-      "name": "substore",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/substore.png"
-    },
-    {
-      "name": "sntp_lite",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/sntp_lite.png"
-    },
-    {
-      "name": "GeNie_square",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/GeNie_square.png"
-    },
-    {
-      "name": "Bitwarden",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/Bitwarden.png"
-    },
-    {
-      "name": "chatgpt",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/chatgpt.png"
-    },
-    {
-      "name": "trakt",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/trakt.png"
+      "name": "qixiuyuan",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/qixiuyuan.png"
     },
     {
       "name": "script-hub",
       "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/script-hub.png"
     },
     {
-      "name": "forward-widget",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/forward-widget.png"
+      "name": "sntp_lite",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/sntp_lite.png"
     },
     {
-      "name": "nodeseek-white",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/nodeseek-white.png"
+      "name": "substore",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/substore.png"
+    },
+    {
+      "name": "tianyue",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/tianyue.png"
+    },
+    {
+      "name": "trakt",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/trakt.png"
+    },
+    {
+      "name": "Uptime-Kuma-Logo",
+      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/Uptime-Kuma-Logo.png"
     }
   ]
 }
