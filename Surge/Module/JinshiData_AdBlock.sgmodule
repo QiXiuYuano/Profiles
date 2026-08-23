@@ -1,0 +1,10 @@
+#!name=金十数据去广告
+#!desc=拦截金十数据 App 的开屏广告与内部展示广告。\n规则来源于 Telegram 群组：https://t.me/lanjieguanggao
+#!system=iOS
+
+[MITM]
+hostname = %APPEND% jad-api.jin10.com
+
+[Script]
+# 请求阶段直接 Mock 返回，避免发出真实请求
+金十数据去广告 = type=http-request,pattern=^https?:\/\/jad-api\.jin10\.com\/ad2\/,script-path=https://raw.githubusercontent.com/StarYunLee/Profiles/main/Surge/Script/JinshiData_AdBlock.js,timeout=10
