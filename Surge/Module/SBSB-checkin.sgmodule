@@ -1,5 +1,6 @@
 #!name=烧饼论坛 (sb.sb) 签到
 #!desc=抓取 Cookie + 每日定时签到。打开烧饼论坛「sb.sb」首页或个人中心捕获凭据（成功会通知）；默认每天 08:30 签到。
+#!author=StarYun
 #!category=Checkin
 #!arguments=Cron:30 8 * * *
 #!arguments-desc=Cron：签到定时（默认每天 08:30，UTC 00:30）
