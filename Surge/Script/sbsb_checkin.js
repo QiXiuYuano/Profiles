@@ -1,6 +1,6 @@
 /*
 ------------------------------------------
-@Author: Sliverkiss (Adapted for sb.sb)
+@Author: StarYun
 @Title: 烧饼论坛 (sb.sb) 自动签到
 @Description: 抓取 Cookie + 每日定时签到
 ------------------------------------------
