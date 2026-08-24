@@ -168,25 +168,32 @@ async function getCookie() {
     try {
         if ($request && $request.method === 'OPTIONS') return;
         const header = ObjectKeys2LowerCase($request.headers) ?? $.msg($.name, `⛔️ script run error!`, `错误的运行方式，请切换到cron环境`);
-        let token = header.cookie;
-        if (!token || token.indexOf("__Host-bbs_session") === -1) return;
+        let cookieHeader = header.cookie;
+        if (!cookieHeader || cookieHeader.indexOf("__Host-bbs_session") === -1) return;
+
+        // 规范化提取核心 Session，避免其他随机键值或顺序变化导致全字符串比对失效
+        const sessionMatch = cookieHeader.match(/__Host-bbs_session=([^;]+)/);
+        if (!sessionMatch) return;
+        const cleanToken = `__Host-bbs_session=${sessionMatch[1].trim()}`;
 
         let userName = "烧饼用户";
         const newData = {
             "userId": userName,
-            "token": token,
+            "token": cleanToken,
             "userName": userName,
         };
 
-        const index = userCookie.findIndex(e => e.userName == newData.userName || e.userId == newData.userId);
+        // 每次重新从 persistentStore 实时读取最新数据，避免并发请求读到过期内存缓存
+        const currentStored = $.toObj($.isNode() ? process.env[ckName] : $.getdata(ckName)) || [];
+        const index = currentStored.findIndex(e => e.userName == newData.userName || e.userId == newData.userId);
         
-        // 凭据一致时静默放行
-        if (index !== -1 && userCookie[index].token === newData.token) {
+        // 核心凭据一致时静默放行
+        if (index !== -1 && currentStored[index].token === newData.token) {
             return;
         }
 
-        userCookie[index !== -1 ? index : userCookie.length] = newData;
-        $.setjson(userCookie, ckName);
+        currentStored[index !== -1 ? index : currentStored.length] = newData;
+        $.setjson(currentStored, ckName);
         $.msg($.name, `🎉 登录凭据 Cookie 捕获成功！`, `已保存至本地存储，每日定时签到将自动生效。`);
     } catch (e) {
         throw e;
