@@ -36,7 +36,7 @@ async function main() {
                 }
             } else {
                 $.title = "⛔️ 登录凭据 Cookie 失效";
-                DoubleLog(isMultiUser ? `👤 ${user.userName || `账号${user.index}`}：请在浏览器中打开 sb.sb/signin/ 重新获取凭据。` : "请在浏览器中打开 sb.sb/signin/ 重新获取凭据。");
+                DoubleLog(isMultiUser ? `👤 ${user.userName || `账号${user.index}`}：请在浏览器中打开烧饼论坛「每日签到」页面以更新凭据。` : "请在浏览器中打开烧饼论坛「每日签到」页面以更新凭据。");
             }
             await sendMsg($.notifyMsg.join("\n"));
         }
@@ -221,7 +221,7 @@ async function getCookie() {
 //prettier-ignore
 async function sendMsg(a) { a && ($.isNode() ? await notify.sendNotify($.name, a) : $.msg($.name, $.title || "", a, { "media-url": $.avatar })) }
 function DoubleLog(o) { o && ($.log(`${o}`), $.notifyMsg.push(`${o}`)) };
-async function checkEnv() { try { if (!userCookie?.length) throw new Error("未检测到有效账号数据！请先在浏览器中打开 sb.sb/signin/ 捕获 Cookie。"); $.log(`\n[INFO] 检测到 ${userCookie?.length ?? 0} 个账号\n`), $.userList.push(...userCookie.map((o => new UserInfo(o))).filter(Boolean)) } catch (o) { throw o } }
+async function checkEnv() { try { if (!userCookie?.length) throw new Error("未检测到有效账号数据！请先在浏览器中打开烧饼论坛「每日签到」页面捕获 Cookie。"); $.log(`\n[INFO] 检测到 ${userCookie?.length ?? 0} 个账号\n`), $.userList.push(...userCookie.map((o => new UserInfo(o))).filter(Boolean)) } catch (o) { throw o } }
 function debug(g, e = "debug") { "true" === $.is_debug && ($.log(`\n-----------${e}------------\n`), $.log("string" == typeof g ? g : $.toStr(g) || `debug error => t=${g}`), $.log(`\n-----------${e}------------\n`)) }
 //From xream's ObjectKeys2LowerCase
 function ObjectKeys2LowerCase(obj) { return !obj ? {} : Object.fromEntries(Object.entries(obj).map(([k, v]) => [k.toLowerCase(), v])) };
