@@ -1,13 +1,13 @@
 #!name=烧饼论坛 (sb.sb) 签到
-#!desc=抓取 Cookie + 每日定时签到。打开烧饼论坛「sb.sb」首页或个人中心捕获凭据（成功会通知）；默认每天 08:30 签到。
+#!desc=抓取 Cookie + 每日定时签到。打开烧饼论坛签到页「sb.sb/signin/」捕获凭据（成功会通知）；默认每天 08:30 签到。
 #!author=StarYunLee
 #!category=Checkin
 #!arguments=Cron:30 8 * * *
 #!arguments-desc=Cron：签到定时（默认每天 08:30，UTC 00:30）
 
 [Script]
-# 烧饼论坛 - 捕获凭据
-SBSBToken = type=http-request, pattern=^https:\/\/sb\.sb\/(signin|my|prefs|go|\?|$), requires-body=false, timeout=60, script-path=https://raw.githubusercontent.com/StarYunLee/Profiles/main/Surge/Script/sbsb_checkin.js
+# 烧饼论坛 - 捕获凭据（仅在访问签到页时触发）
+SBSBToken = type=http-request, pattern=^https:\/\/sb\.sb\/signin\/?(\?.*)?$, requires-body=false, timeout=60, script-path=https://raw.githubusercontent.com/StarYunLee/Profiles/main/Surge/Script/sbsb_checkin.js
 
 # 烧饼论坛 - 定时签到
 SBSBCheckin = type=cron, cronexp={{{Cron}}}, timeout=60, wake-system=1, script-path=https://raw.githubusercontent.com/StarYunLee/Profiles/main/Surge/Script/sbsb_checkin.js
