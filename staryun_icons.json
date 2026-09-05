@@ -3,10 +3,6 @@
   "description": "存放、收集个人自用的图标",
   "icons": [
     {
-      "name": "apple",
-      "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/apple.png"
-    },
-    {
       "name": "Bitwarden",
       "url": "https://raw.githubusercontent.com/StarYunLee/Profiles/main/icon/Bitwarden.png"
     },
